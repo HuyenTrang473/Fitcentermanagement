@@ -9,5 +9,4 @@ public class FitmecentermanagementApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FitmecentermanagementApplication.class, args);
 	}
-
 }

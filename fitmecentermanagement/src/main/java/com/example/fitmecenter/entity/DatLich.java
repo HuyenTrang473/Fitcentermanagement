@@ -4,18 +4,18 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
 
-
 @Entity
 @Table(name = "DatLich")
 @Data
 public class DatLich {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer maDatLich;
 
     @ManyToOne
     @JoinColumn(name = "maKhachHang", nullable = false)
-    private KhachHang khachHang; 
+    private KhachHang khachHang;
 
     @ManyToOne
     @JoinColumn(name = "maKhoaTap", nullable = false)
@@ -25,10 +25,15 @@ public class DatLich {
     @JoinColumn(name = "maNhanVien", nullable = false)
     private NhanVien nhanVien;
 
-    @Column(length = 20)
-    private String trangThai = "CHO_XAC_NHAN";
+    @Column(nullable = false, length = 50)
+    private String trangThai;
 
+    @Column(nullable = false)
     private LocalDateTime thoiGianBatDau;
+
+    @Column(nullable = false)
     private LocalDateTime thoiGianKetThuc;
-    private LocalDateTime ngayDat = LocalDateTime.now();
+
+    @Column(nullable = false)
+    private LocalDateTime ngayDat;
 }

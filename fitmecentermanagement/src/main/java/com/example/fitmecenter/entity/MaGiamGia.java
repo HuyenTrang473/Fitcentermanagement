@@ -8,17 +8,23 @@ import java.time.LocalDateTime;
 @Table(name = "MaGiamGia")
 @Data
 public class MaGiamGia {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer maMaGiamGia;
 
-    @Column(unique = true, nullable = false, length = 20)
+    @Column(nullable = false, unique = true, length = 50)
     private String maCode;
 
-    private int giamPhanTram;
-    private LocalDateTime hanSuDung;
-    private int soLuong;
+    @Column(nullable = false)
+    private Integer giamPhanTram;
 
-    @Column(length = 20)
-    private String trangThai = "CON_HAN";
+    @Column(nullable = false)
+    private LocalDateTime hanSuDung;
+
+    @Column(nullable = false)
+    private Integer soLuong;
+
+    @Column(nullable = false, length = 50)
+    private String trangThai;
 }

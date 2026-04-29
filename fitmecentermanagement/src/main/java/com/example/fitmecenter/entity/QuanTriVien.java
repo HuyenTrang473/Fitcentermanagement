@@ -5,13 +5,13 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "KhachHang")
+@Table(name = "QuanTriVien")
 @Data
-public class KhachHang {
+public class QuanTriVien {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer maKhachHang;
+    private Integer maQuanTriVien;
 
     @OneToOne
     @JoinColumn(name = "maTaiKhoan", nullable = false, unique = true)
@@ -20,11 +20,8 @@ public class KhachHang {
     @Column(nullable = false, length = 100)
     private String hoTen;
 
-    @Column(nullable = false, length = 20)
+    @Column(length = 20)
     private String soDienThoai;
-
-    @Column(nullable = false, length = 255)
-    private String diaChi;
 
     @Column(nullable = false)
     private LocalDateTime ngayTao;

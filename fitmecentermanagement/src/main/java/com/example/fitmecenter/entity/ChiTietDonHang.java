@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 @Table(name = "ChiTietDonHang")
 @Data
 public class ChiTietDonHang {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer maChiTiet;
@@ -20,6 +21,9 @@ public class ChiTietDonHang {
     @JoinColumn(name = "maSanPham", nullable = false)
     private SanPham sanPham;
 
-    private int soLuong;
+    @Column(nullable = false)
+    private Integer soLuong;
+
+    @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal gia;
 }

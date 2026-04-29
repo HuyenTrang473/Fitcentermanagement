@@ -2,13 +2,14 @@ package com.example.fitmecenter.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "KhoaTap")
 @Data
 public class KhoaTap {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer maKhoaTap;
@@ -16,10 +17,12 @@ public class KhoaTap {
     @Column(nullable = false, length = 100)
     private String tenKhoaTap;
 
-    @Column(nullable = false)
+    @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal gia;
 
-    private int thoiLuong;
+    @Column(nullable = false)
+    private Integer thoiLuong;
 
-    private LocalDateTime ngayTao = LocalDateTime.now();
+    @Column(nullable = false)
+    private LocalDateTime ngayTao;
 }

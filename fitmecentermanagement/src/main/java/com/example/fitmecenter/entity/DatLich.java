@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "DatLich")
+@Table(name = "datlich")
 @Data
 public class DatLich {
 
@@ -14,15 +14,15 @@ public class DatLich {
     private Integer maDatLich;
 
     @ManyToOne
-    @JoinColumn(name = "maKhachHang", nullable = false)
+    @JoinColumn(name = "ma_khach_hang", nullable = false)
     private KhachHang khachHang;
 
     @ManyToOne
-    @JoinColumn(name = "maKhoaTap", nullable = false)
+    @JoinColumn(name = "ma_khoa_tap", nullable = false)
     private KhoaTap khoaTap;
 
     @ManyToOne
-    @JoinColumn(name = "maNhanVien", nullable = false)
+    @JoinColumn(name = "ma_nhan_vien", nullable = false)
     private NhanVien nhanVien;
 
     @Column(nullable = false, length = 50)

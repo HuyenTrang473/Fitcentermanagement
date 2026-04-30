@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "TaiKhoan")
+@Table(name = "taikhoan")
 @Data
 public class TaiKhoan {
 
@@ -20,7 +20,7 @@ public class TaiKhoan {
     private String matKhau;
 
     @ManyToOne
-    @JoinColumn(name = "maVaiTro", nullable = false)
+    @JoinColumn(name = "ma_vai_tro", nullable = false)
     private VaiTro vaiTro;
 
     @Column(nullable = false)

@@ -5,13 +5,13 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "MaGiamGia")
+@Table(name = "magiamgia")
 @Data
 public class MaGiamGia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer maMaGiamGia;
+    private Integer maGiamGia;
 
     @Column(nullable = false, unique = true, length = 50)
     private String maCode;

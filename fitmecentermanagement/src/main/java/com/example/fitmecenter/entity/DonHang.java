@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "DonHang")
+@Table(name = "donhang")
 @Data
 public class DonHang {
 
@@ -15,11 +15,11 @@ public class DonHang {
     private Integer maDonHang;
 
     @ManyToOne
-    @JoinColumn(name = "maKhachHang", nullable = false)
+    @JoinColumn(name = "ma_khach_hang", nullable = false)
     private KhachHang khachHang;
 
     @ManyToOne
-    @JoinColumn(name = "maMaGiamGia")
+    @JoinColumn(name = "ma_giam_gia")
     private MaGiamGia maGiamGia;
 
     @Column(nullable = false, precision = 10, scale = 2)

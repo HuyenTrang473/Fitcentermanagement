@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "QuanTriVien")
+@Table(name = "quantrivien")
 @Data
 public class QuanTriVien {
 
@@ -14,7 +14,7 @@ public class QuanTriVien {
     private Integer maQuanTriVien;
 
     @OneToOne
-    @JoinColumn(name = "maTaiKhoan", nullable = false, unique = true)
+    @JoinColumn(name = "ma_tai_khoan", nullable = false, unique = true)
     private TaiKhoan taiKhoan;
 
     @Column(nullable = false, length = 100)

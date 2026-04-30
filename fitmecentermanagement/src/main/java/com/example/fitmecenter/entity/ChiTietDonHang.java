@@ -5,7 +5,7 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "ChiTietDonHang")
+@Table(name = "chitietdonhang")
 @Data
 public class ChiTietDonHang {
 
@@ -14,11 +14,11 @@ public class ChiTietDonHang {
     private Integer maChiTiet;
 
     @ManyToOne
-    @JoinColumn(name = "maDonHang", nullable = false)
+    @JoinColumn(name = "ma_don_hang", nullable = false)
     private DonHang donHang;
 
     @ManyToOne
-    @JoinColumn(name = "maSanPham", nullable = false)
+    @JoinColumn(name = "ma_san_pham", nullable = false)
     private SanPham sanPham;
 
     @Column(nullable = false)
